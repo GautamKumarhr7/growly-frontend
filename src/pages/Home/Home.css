@@ -1,0 +1,244 @@
+.home {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.home-header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.welcome-section {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.welcome-section h2 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.welcome-section p {
+  margin: 0;
+  color: #64748b;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.feature-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border-color: #667eea;
+}
+
+.feature-card.coming-soon {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.feature-card.coming-soon:hover {
+  transform: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-color: transparent;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.feature-card h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.feature-card p {
+  margin: 0 0 20px 0;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.feature-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.feature-stats span {
+  color: #475569;
+  font-size: 0.9rem;
+  padding-left: 10px;
+  position: relative;
+}
+
+.feature-stats span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background: #667eea;
+  border-radius: 50%;
+}
+
+.coming-soon-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #f59e0b;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.quick-actions {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.quick-actions h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home {
+    padding: 15px;
+  }
+  
+  .home-header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .home-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .welcome-section {
+    padding: 30px 20px;
+  }
+  
+  .welcome-section h2 {
+    font-size: 2rem;
+  }
+  
+  .welcome-section p {
+    font-size: 1rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .feature-card {
+    padding: 25px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .action-buttons button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .feature-card {
+    padding: 20px;
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem;
+  }
+}
+
+/* Animation for feature cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+.feature-card:nth-child(4) { animation-delay: 0.4s; } 
